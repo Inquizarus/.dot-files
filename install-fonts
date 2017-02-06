@@ -1,0 +1,18 @@
+#!/bin/bash
+echo "Crawling over to the tmp folder my lord.."
+echo ""
+startingPath="$PWD"
+cd /tmp
+echo "Fetching some really cool fonts master!"
+wget "https://github.com/tonsky/FiraCode/archive/master.zip"
+unzip -o master.zip
+echo "Storing the new toys in our font treasury!"
+mkdir -p ~/.fonts
+cp FiraCode-master/distr/ttf/*.ttf ~/.fonts/
+echo ""
+echo "Cleaning up sir!"
+rm -rf FiraCode-master 
+rm master.zip
+echo ""
+echo "Moving back to where we was before my liege!"
+cd "$startingPath"
