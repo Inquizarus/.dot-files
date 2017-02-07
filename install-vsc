@@ -1,0 +1,15 @@
+#!/bin/bash
+echo "Crawling over to the tmp folder my lord.."
+echo ""
+startingPath="$PWD"
+cd /tmp
+echo "Fetching the latest of the best master!"
+wget -O stable_vsc.deb "https://vscode-update.azurewebsites.net/latest/linux-deb-x64/stable"
+echo "Woho! Time for installation!"
+sudo dpkg -i stable_vsc.deb
+echo ""
+echo "Cleaning up sir!"
+rm stable_vsc.deb
+echo ""
+echo "Moving back to where we was before my liege!"
+cd "$startingPath"
