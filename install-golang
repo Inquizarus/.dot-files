@@ -1,0 +1,23 @@
+#!/bin/bash
+echo "Crawling over to the tmp folder my lord.."
+echo ""
+startingPath="$PWD"
+cd /tmp
+echo "Fetching the gopher master!"
+wget -O go.tar.gz "https://dl.google.com/go/go1.11.1.linux-amd64.tar.gz"
+echo "removing the current go version installed"
+sudo rm -rf /usr/local/go
+echo "installing the new goodies!"
+sudo tar -C /usr/local -xzf go.tar.gz
+echo "cleaning up things"
+rm go.tar.gz
+echo  "moving to home folder for local dir creation"
+cd $HOME
+mkdir -p go/src
+mkdir -p go/bin
+mkdir -p go/pkg
+echo "testing that go is available!"
+source ~
+go version
+echo "Moving back to where we was before my liege!"
+cd "$startingPath"
