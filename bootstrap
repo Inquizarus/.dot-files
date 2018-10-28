@@ -1,5 +1,6 @@
 #!/bin/bash
 cp .profile $HOME/.profile
+./install-common
 ./install-fonts
 ./install-oh-my-zshell
 ./install-vsc
