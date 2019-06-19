@@ -1,0 +1,4 @@
+#!/bin/bash
+echo "running silent upgrade"
+sudo apt -qq upgrade -y
+echo ""

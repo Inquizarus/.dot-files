@@ -1,0 +1,5 @@
+#!/bin/bash
+
+echo "running silent update"
+sudo apt -qq update
+echo ""

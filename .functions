@@ -1,0 +1,16 @@
+#!/bin/bash
+DOTFILES_DIR="$HOME/dotfiles"
+update () {
+    CURRENT_DIR="$(pwd)"
+    cd "$DOTFILES_DIR"
+    ./update
+    cd "$CURRENT_DIR"
+}
+
+upgrade () {
+    CURRENT_DIR="$(pwd)"
+    cd "$DOTFILES_DIR"
+    ./upgrade
+
+    cd "$CURRENT_DIR"
+}

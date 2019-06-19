@@ -6,19 +6,11 @@ cd /tmp
 sudo apt install apt-transport-https ca-certificates curl software-properties-common -y
 sudo apt install tilix -y
 sudo apt install jq -y
-echo "installing docker-ce"
+echo "installing podman"
 echo ""
-curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo apt-key add -
-sudo add-apt-repository "deb [arch=amd64] https://download.docker.com/linux/ubuntu bionic stable"
-sudo apt update
-apt-cache policy docker-ce
-sudo apt install docker-ce -y
-echo "adding user to docker group, you will have to logout and login to have it take effect"
-echo ""
-sudo usermod -aG docker ${USER}
-echo "installing docker-compose"
-echo ""
-sudo curl -L https://github.com/docker/compose/releases/download/1.21.2/docker-compose-`uname -s`-`uname -m` -o /usr/local/bin/docker-compose
-sudo chmod +x /usr/local/bin/docker-compose
+./update
+sudo apt-get install -qq -y software-properties-common uidmap
+sudo add-apt-repository -y ppa:projectatomic/ppa
+./update
 echo "Moving back to where we was before my liege!"
 cd "$startingPath"

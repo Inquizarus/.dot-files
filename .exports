@@ -1,0 +1,13 @@
+#!/bin/bash
+
+# ssh
+export SSH_KEY_PATH="~/.ssh/rsa_id"
+
+# add users bin to path
+export PATH=$PATH:$HOME/.local/bin
+
+# add go bin to the path
+export PATH=$PATH:$HOME/go/bin
+
+# nvm stuff
+export NVM_DIR="$HOME/.nvm"

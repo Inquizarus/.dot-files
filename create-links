@@ -1,3 +1,14 @@
 #!/bin/bash
-echo "Does not do anything yet."
-echo
+rm "$HOME/.profile"
+rm "$HOME/.zshrc"
+rm "$HOME/.aliases"
+rm "$HOME/.exports"
+rm "$HOME/.functions"
+
+DOTFILES_PATH=$(pwd)
+
+ln -s "$DOTFILES_PATH/.profile" "$HOME/.profile"
+ln -s "$DOTFILES_PATH/.zshrc" "$HOME/.zshrc"
+ln -s "$DOTFILES_PATH/.aliases" "$HOME/.aliases"
+ln -s "$DOTFILES_PATH/.exports" "$HOME/.exports"
+ln -s "$DOTFILES_PATH/.functions" "$HOME/.functions"
