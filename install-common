@@ -8,9 +8,10 @@ sudo apt install tilix -y
 sudo apt install jq -y
 echo "installing podman"
 echo ""
-./update
 sudo apt-get install -qq -y software-properties-common uidmap
-sudo add-apt-repository -y ppa:projectatomic/ppa
 ./update
+sudo apt-get -qq -y install podman
+echo "installing things for yubikeys"
+sudo apt-get -qq -y install libpam-u2f
 echo "Moving back to where we was before my liege!"
 cd "$startingPath"
