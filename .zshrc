@@ -7,7 +7,19 @@
 # Set name of the theme to load. Optionally, if you set this to "random"
 # it'll load a random theme each time that oh-my-zsh is loaded.
 # See https://github.com/robbyrussell/oh-my-zsh/wiki/Themes
-ZSH_THEME="robbyrussell"
+#ZSH_THEME="robbyrussell"
+#ZSH_THEME="ys"
+
+# Powerlevel theme stuff
+POWERLEVEL9K_MODE='nerdfont-complete'
+ZSH_THEME="powerlevel9k/powerlevel9k"
+POWERLEVEL9K_DISABLE_RPROMPT=true
+POWERLEVEL9K_PROMPT_ON_NEWLINE=true
+POWERLEVEL9K_MULTILINE_LAST_PROMPT_PREFIX="$ "
+POWERLEVEL9K_MULTILINE_FIRST_PROMPT_PREFIX=""
+POWERLEVEL9K_LEFT_PROMPT_ELEMENTS=(context dir vcs)
+POWERLEVEL9K_RIGH_PROMPT_ELEMENTS=(nvm node_version)
+# End powerlevel theme stuff
 
 plugins=(
   git
@@ -19,7 +31,8 @@ plugins=(
   zsh-autosuggestions
   doctl
   nvm
-)
+  sudo
+ )
 
 source $HOME/.profile
 source $ZSH/oh-my-zsh.sh

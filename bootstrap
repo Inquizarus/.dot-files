@@ -4,5 +4,6 @@
 ./install-common
 ./install-fonts
 ./install-oh-my-zshell
+./install-themes
 ./install-vsc
 ./install-go

@@ -1,0 +1,5 @@
+#!/bin/bash
+./update
+sudo apt install tilix
+mkdir -p "$HOME/.config/tilix/schemes"
+wget -qO $HOME"/.config/tilix/schemes/nord.json" https://raw.githubusercontent.com/arcticicestudio/nord-tilix/develop/src/json/nord.json

@@ -1,4 +1,6 @@
 #!/bin/bash
+echo "Creating home dir font directory"
+mkdir -p ~/.fonts
 echo "Crawling over to the tmp folder my lord.."
 echo ""
 startingPath="$PWD"
@@ -7,12 +9,20 @@ echo "Fetching some really cool fonts master!"
 wget "https://github.com/tonsky/FiraCode/archive/master.zip"
 unzip -o master.zip
 echo "Storing the new toys in our font treasury!"
-mkdir -p ~/.fonts
 cp FiraCode-master/distr/ttf/*.ttf ~/.fonts/
 echo ""
+
+echo "Installing nerd fonts"
+git clone --depth 1 https://github.com/ryanoasis/nerd-fonts.git
+cd nerd-fonts
+./install.sh
+cd ..
 echo "Cleaning up sir!"
 rm -rf FiraCode-master 
 rm master.zip
+echo ""
+echo "clearing font cache"
+fc-cache -f -v
 echo ""
 echo "Moving back to where we was before my liege!"
 cd "$startingPath"
