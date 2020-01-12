@@ -41,6 +41,7 @@ source $ZSH/oh-my-zsh.sh
 # * ~/.path can be used to extend `$PATH`.
 # * ~/.extra can be used for other settings you don’t want to commit.
 for file in ~/.{exports,aliases,functions,extra}; do
+	echo "sourcing $file"
 	[ -r "$file" ] && [ -f "$file" ] && source "$file";
 done;
 unset file;

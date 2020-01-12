@@ -7,8 +7,8 @@ rm "$HOME/.functions"
 
 DOTFILES_PATH=$(pwd)
 
-ln -s "$DOTFILES_PATH/.profile" "$HOME/.profile"
-ln -s "$DOTFILES_PATH/.zshrc" "$HOME/.zshrc"
-ln -s "$DOTFILES_PATH/.aliases" "$HOME/.aliases"
-ln -s "$DOTFILES_PATH/.exports" "$HOME/.exports"
-ln -s "$DOTFILES_PATH/.functions" "$HOME/.functions"
+ln -s "$DOTFILES_PATH/profile" "$HOME/.profile"
+ln -s "$DOTFILES_PATH/zshrc" "$HOME/.zshrc"
+ln -s "$DOTFILES_PATH/aliases" "$HOME/.aliases"
+ln -s "$DOTFILES_PATH/exports" "$HOME/.exports"
+ln -s "$DOTFILES_PATH/functions" "$HOME/.functions"

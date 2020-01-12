@@ -1,8 +1,8 @@
 #!/bin/bash
 ./add-ppas
-./update
 ./install-common
-./install-fonts
+./install-oh-my-zsh
+./create-links
 ./install-go
 ./install-terraform
 ./upgrade
