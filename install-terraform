@@ -1,0 +1,16 @@
+#!/bin/bash
+echo "Crawling over to the tmp folder my lord.."
+echo ""
+startingPath="$PWD"
+cd /tmp
+echo "Fetching the terraform stuff master!"
+wget -O terraform.zip "https://releases.hashicorp.com/terraform/0.12.19/terraform_0.12.19_linux_amd64.zip"
+echo "removing the current terraform version installed"
+sudo rm -rf /usr/local/bin/terraform
+echo "installing the new goodies!"
+unzip terraform.zip
+sudo mv terraform /usr/local/bin/
+echo "cleaning up things"
+rm terraform.zip
+echo "Moving back to where we was before my liege!"
+cd "$startingPath"

@@ -6,6 +6,8 @@ cd /tmp
 sudo apt install apt-transport-https ca-certificates curl software-properties-common -y
 sudo apt install tilix -y
 sudo apt install jq -y
+sudo apt install zip -y
+sudo apt install build-essential -y
 echo "installing podman"
 echo ""
 sudo apt-get install -qq -y software-properties-common uidmap

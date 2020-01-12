@@ -11,10 +11,13 @@ echo "installing the new goodies!"
 sudo tar -C /usr/local -xzf go.tar.gz
 echo "cleaning up things"
 rm go.tar.gz
-echo  "moving to home folder for local dir creation"
-cd $HOME
-mkdir -p go/src
-mkdir -p go/bin
-mkdir -p go/pkg
+if [ ! -d "$HOME/go" ]; then
+	echo "no go folder in home directory"
+	echo  "moving to home folder for go folder structure setup"
+	cd $HOME
+	mkdir -p go/src
+	mkdir -p go/bin
+	mkdir -p go/pkg
+fi
 echo "Moving back to where we was before my liege!"
 cd "$startingPath"
